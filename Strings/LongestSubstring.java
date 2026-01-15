@@ -1,9 +1,9 @@
-package Arrays;
+package Strings;
 
 import java.util.HashSet;
 import java.util.Set;
 
-class Solution {
+class LongestSubstring {
     public int lengthOfLongestSubstring(String s) {
         Set<Character>set= new HashSet<>();
           int left=0;
@@ -26,9 +26,9 @@ class Solution {
 public static void main(String[] args) {
     String s = "abcabcbb";
 
-    Solution obj = new Solution();
+    LongestSubstring obj = new LongestSubstring();
     int result = obj.lengthOfLongestSubstring(s);
 
     System.out.println(result);
 }
-}
+};

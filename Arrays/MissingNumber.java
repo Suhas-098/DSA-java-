@@ -10,6 +10,8 @@
 // example nums = [1, 2, 3, 4, 6, 7, ..., 200] output: 5;
 
 package Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 
 
@@ -18,13 +20,13 @@ public class MissingNumber {
     public static int findMissing(int nums[]){
         //this is using Arithmetic approach using sum formula which is to find the sum n*n+1/2
 
-    //   int n=9;
-    //   int sum=n*(n+1)/2;
-    //   int x=0;
-    //   for(int i=0;i<nums.length;i++){
-    //    x += nums[i];
-    //   }
-    //   return sum - x;
+      int n=9;
+      int sum=n*(n+1)/2;
+      int x=0;
+      for(int i=0;i<nums.length;i++){
+       x += nums[i];
+      }
+      return sum - x;
 
     //HashMap approach
 
@@ -41,17 +43,17 @@ public class MissingNumber {
 
 
     //Best optimal approach using XOR 
-    int n=nums.length+1;
-    int XOR= 0;
+    // int n=nums.length+1;
+    // int XOR= 0;
 
-    for(int i=0;i<=n;i++){
-        XOR ^= i;
-    }
+    // for(int i=0;i<=n;i++){
+    //     XOR ^= i;
+    // }
 
-    for(int num:nums){
-        XOR ^= num;
-    }
-    return XOR;
+    // for(int num:nums){
+    //     XOR ^= num;
+    // }
+    // return XOR;
 
 
     }

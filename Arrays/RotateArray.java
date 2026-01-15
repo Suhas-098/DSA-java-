@@ -4,6 +4,7 @@ public class RotateArray {
 
     public boolean rotate(String s, String goal ){
         if(s.length() != goal.length())return false;
+        // return (s+s).contains(goal);
        String combine=s+s;
        if(combine.contains(goal))return true;
        else{

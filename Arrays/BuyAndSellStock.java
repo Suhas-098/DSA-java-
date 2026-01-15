@@ -3,14 +3,16 @@ package Arrays;
 public class BuyAndSellStock {
 
      public static int maxProfit(int[] prices) {
-        int buy=0;
-        int sell=0;
+        int buy=Integer.MAX_VALUE;
+        int Profit=0;
         for(int i=0;i<prices.length;i++){
-            if(prices[buy]<sell){
-                return sell-prices[buy];
-            }
+          if(prices[i]<buy){
+            buy=prices[i];
+          }else{
+            Profit=Math.max(Profit, prices[i]-buy);
+          }
         }
-        return -1;
+        return Profit;
     }
 
     public static void main(String[] args) {

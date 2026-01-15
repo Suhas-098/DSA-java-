@@ -17,8 +17,8 @@ public class VaildAnagram {
         return true;
     }
     public static void main(String[] args) {
-        String s="rat";
-        String t="ear";
+        String s="anagram";
+        String t="nagaram";
 
         VaildAnagram sc= new VaildAnagram();
         System.out.println(sc.check(s, t));
